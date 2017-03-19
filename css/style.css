@@ -1,0 +1,520 @@
+/*Reset CSS*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*Add custom fonts*/
+@font-face {
+    font-family: "BerlinSansFB-Reg";
+    src: url(../fonts/BerlinSansFB-Regular.ttf);
+}
+@font-face {
+    font-family: "Rockwell-Bold";
+    src: url(../fonts/Rockwell-Bold.ttf);
+}
+@font-face {
+    font-family: "Rockwell";
+    src: url(../fonts/RockwellRegular.ttf);
+}
+@font-face {
+    font-family: "MyriadPro-Bold";
+    src: url(../fonts/MyriadPro-Bold.otf);
+}
+@font-face {
+    font-family: "LucidaGrande-Bold";
+    src: url(../fonts/LucidaGrande-Bold.ttf);
+}
+@font-face {
+    font-family: "VAL";
+    src: url(../fonts/VAL.otf);
+}
+
+/*Main style*/
+body {
+	overflow-x: hidden;
+}
+body, .wrapper { 
+    max-width: 1226px;
+    margin: auto;
+    height: 100%;
+}
+img {
+	width: 100%;
+	height: auto;
+}
+.wrapper {
+	max-width: 940px;
+	padding: 0px 15px;
+}
+
+
+/*Header*/
+.hamburger-icon {
+	background: url(../img/hamburger-icon.svg);
+	background-repeat: no-repeat;
+	width: 30px;
+	height: 30px;
+	cursor: pointer;
+	position: relative;
+	top: 10px;
+	display: none;
+}
+.hamburger-menu__close-btn {
+	background: url(../img/hamburger-close-icon.svg);
+	background-repeat: no-repeat;
+	width: 25px;
+	height: 25px;
+	cursor: pointer;
+	position: absolute;
+	top: 15px;
+	right: 15px;
+}
+.hamburger-menu {
+	position: absolute;
+    width: 200px;
+    background-color: #383838;
+    top: 0px;
+    right: 0px;
+    height: 100%;
+    z-index: 999;
+	margin-right: -200px;
+	transition: .5s;
+}
+.hamburger-menu__nav ul {
+    text-align: center;
+    margin-top: 50px;
+}
+.hamburger-menu__nav ul li {
+	margin-bottom: 15px;
+}
+.hamburger-menu__nav ul li a {
+	text-decoration: none;
+	font-family: "BerlinSansFB-Reg";
+	color: #fff;
+}
+.header__blackLine {
+	background-color: #3b3b3b;
+	height: 12px;
+}
+.header__top,
+.header__bottom {
+	position: absolute;
+	width: 100%;
+	max-width: 1226px;
+}
+.header__bottom {
+    top: 565px;
+}
+.header__opacityLine {
+	background-color: rgba(0, 0, 0, 0.1);
+	height: 10px;
+}
+.header__mainImg {
+	background-image: url("../img/header-main-img.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 575px;
+}
+.header__mainImg__menu ul li {
+	display: inline-block;
+	margin-left: 50px;
+	text-shadow: 1px 1px 3px #000;
+	
+}
+.header__mainImg-mainDiv .header__mainImg__menu .header__mainImg__menu_active {
+	color: #3b3b3b;
+}
+.header__mainImg__menu ul li a {
+	font-family: "BerlinSansFB-Reg";
+	color: #faf5f5;
+	font-size: 13.33px;
+	text-decoration: none;
+	position: relative;
+}
+.header__mainImg__menu ul li a:hover {
+	-webkit-animation-name: verminMenu; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 2s; /* Safari 4.0 - 8.0 */
+    animation-name: verminMenu;
+    animation-duration: 2s;
+	color: #3b3b3b;
+}
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes verminMenu {
+    0% {right: 20px}
+    25% {right: -20px;}
+    50% {right: 10px}
+    75% {right: -10px;}
+    100% {right: 0px;}
+}
+
+@keyframes verminMenu {
+    0% {right: 20px}
+    25% {right: -20px;}
+    50% {right: 10px}
+    75% {right: -10px;}
+    100% {right: 0px;}
+}
+.header__mainImg-mainDiv {
+	display: flex;
+	justify-content: space-between;
+	padding-top: 69px;
+}
+.header__mainImg__menu {
+	display: flex;
+	align-items: center;
+}
+.header__mainImg-blackReact {
+	background-image: url("../img/header-black-react-img.jpg");
+	background-repeat: no-repeat;
+	height: 486px;
+	border: 10px solid rgba(0, 0, 0, 0.1);
+	margin-top: 60px;
+	position: relative;
+    z-index: 99;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 1s;
+    outline: none;
+}
+.slick-initialized .slick-slide {
+	display: flex;
+}
+.slick-list {
+	z-index: 99;
+}
+.header__mainImg-blackReact:hover {
+	-webkit-animation-name: blackReact; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 1.5s; /* Safari 4.0 - 8.0 */
+    animation-name: blackReact;
+    animation-duration: 1.5s;
+}
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes blackReact {
+    0% {border-top-left-radius: 100px}
+    25% {border-bottom-right-radius: 100px;}
+    50% {border-top-right-radius: 100px}
+    75% {border-bottom-left-radius: 100px;}
+    100% {right: 0px;}
+}
+
+@keyframes blackReact {
+    0% {border-top-left-radius: 100px}
+    25% {border-bottom-right-radius: 100px;}
+    50% {border-top-right-radius: 100px}
+    75% {border-bottom-left-radius: 100px;}
+    100% {right: 0px;}
+}
+.header__mainImg-blackReact p {
+	color: #fff;
+	font-family: "BerlinSansFB-Reg";
+}
+.header__mainImg-blackReact__text {
+	text-align: center;
+}
+.header__mainImg-blackReact__first-p {
+	font-size: 52.86px;
+}
+.header__mainImg-blackReact__second-p {
+	font-size: 19.22px;
+}
+
+/*Main*/
+.main__first-div {
+	text-align: center;
+    margin-top: 172px;
+}
+.main__first-div p {
+    font-family: "Rockwell-Bold";
+	font-size: 30px;
+	color: #535353;
+}
+.main__first-div span {
+	display: inline-block;
+    border-radius: 35px;
+    padding: 4px;
+    border: 2px solid #e6e2d7;
+    margin: 60px 0px;
+}
+.main__first-div button {
+	font-family: Verdana;
+    font-size: 20px;
+    color: #fff;
+    background-color: #f36566;
+    height: 57px;
+    width: 260px;
+    border-radius: 30px;
+    outline: none;
+    border: 2px solid #e8e3d9;
+    cursor: pointer;
+}
+.main__first-div button:hover {
+  -webkit-animation: swing 0.6s ease;
+  animation: swing 0.6s ease;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+}
+
+@-webkit-keyframes swing {
+  15% {
+    -webkit-transform: translateX(9px);
+  }
+  30% {
+    -webkit-transform: translateX(-9px);
+  }
+  40% {
+    -webkit-transform: translateX(6px);
+  }
+  50% {
+    -webkit-transform: translateX(-6px);
+  }
+  65% {
+    -webkit-transform: translateX(3px);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+  }
+}
+
+@keyframes swing {
+  15% {
+    transform: translateX(9px);
+  }
+  30% {
+    transform: translateX(-9px);
+  }
+  40% {
+    transform: translateX(6px);
+  }
+  50% {
+    transform: translateX(-6px);
+  }
+  65% {
+    transform: translateX(3px);
+  }
+  100% {;
+    transform: translateX(0);
+  }
+}
+
+.main__div-three__img-first,
+.main__div-three__img-second,
+.main__div-three__img-third {
+	height: 135px;
+	border: 8px solid rgba(59, 59, 59 ,0.12);
+	min-width: 284px;
+	display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+}
+.main__div-three__img-first {
+	background-image: url("../img/main-img-first.jpg");
+	background-repeat: no-repeat;
+}
+.main__div-three__img-first p {
+	color: #fff;
+	font-family: "MyriadPro-Bold";
+}
+.main__div-three__img-second {
+	background-image: url("../img/main-img-second.jpg");
+	background-repeat: no-repeat;
+}
+.main__div-three__img-second p {
+	color: #3a3a3a;
+	font-family: "VAL";
+}
+.main__div-three__img-third {
+	background-image: url("../img/main-img-third.jpg");
+	background-repeat: no-repeat;
+}
+.main__div-three__img-third p:nth-child(1) {
+	color: #2b2b2b;
+	font-family: "Rockwell-Bold";
+}
+.main__div-three__img-third p:nth-child(2) {
+	color: #3b3b3b;
+	font-family: "Rockwell";
+}
+.main__div-three {
+	display: flex;
+	margin-bottom: 70px;
+}
+.main__div-three__img-third > div,
+.main__div-three__img-second > div {
+	text-align: center;
+}
+.main__div-three__header {
+	font-family: "LucidaGrande-Bold";
+	font-size: 20px;
+}
+.main__div-three__text {
+	font-family: Verdana;
+	font-size: 11px;
+	color: #2b2b2b;
+	line-height: 20px;
+}
+.main__div-three__margin-right {
+	margin-right: 20px;
+}
+.main__div-three__div-text {
+	padding: 10px;
+}
+.main__div-three__header {
+	margin: 10px 0;
+}
+.main__div-three__div-text a {
+	font-family: Verdana;
+	font-size: 11px;
+	color: #f95959;
+	text-decoration: none;
+	display: block;
+	text-align: right;
+	margin-top: 10px;
+	font-weight: 900;
+}
+
+/*Footer*/
+footer {
+	background-image: url("../img/footer-main-img.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.footer__main-div__main-p {
+	font-family: "BerlinSansFB-Reg";
+	font-size: 20px;
+	color: #fff;
+	margin-bottom: 24px;
+	text-shadow: 1px 1px 3px #000;
+}
+.footer__main-div > div {
+	width: 33%;
+}
+.footer__main-div img {
+	width: inherit;
+	border: 4px solid #4d4d4d;
+	max-height: 74px;
+	margin-right: 10px;
+}
+.footer__main-div {
+	display: flex;
+	justify-content: space-between;
+	padding-top: 55px;
+	margin-bottom: 45px; 
+}
+.footer__main-div__comment-div {
+	display: flex;
+	padding: 10px;
+}
+.footer__main-div__comment-div__text {
+	position: relative;
+	top: -8px;
+}
+.footer__main-div__comment-div__text strong {
+	font-weight: 900;
+}
+.footer__main-div__comment-div__text p {
+	font-family: Verdana;
+    font-size: 11px;
+    line-height: 25px;
+    color: #fff;
+}
+.footer__main-div__comment-div__text p:nth-child(2) {
+	color: #a1a1a1;
+	cursor: pointer;
+}
+.footer__main-div__latest-tweets {
+	margin-bottom: 23px;
+	line-height: 15px;
+}
+.footer__main-div__latest-tweets p,
+.footer__main-div__latest-tweets a {
+	font-family: "BerlinSansFB-Reg";
+	font-size: 13.33px;
+}
+.footer__main-div__latest-tweets p {
+	color: #fff;
+}
+.footer__main-div__latest-tweets a {
+	color: #d25252;
+	text-decoration: none;
+}
+.footer__main-div__latest-tweets p:nth-child(3) {
+	color: #a1a1a1;
+}
+.footer__main-div__main-p-second {
+	margin-bottom: 30px;
+}
+.footer__main-div__main-p-last {
+	line-height: 25px;
+}
+.footer__main-div__main-p-last p {
+	color: #fff;
+}
+.footer__main-div__main-p-last p:nth-child(1),
+.footer__main-div__main-p-last p:nth-child(2) {
+	font-family: "BerlinSansFB-Reg";
+	text-shadow: 1px 1px 3px #000;
+}
+.footer__main-div__main-p-last p:nth-child(1) {
+	font-size: 36.67px;	
+}
+.footer__main-div__main-p-last p:nth-child(2) {
+	font-size: 13.33px;
+	margin-bottom: 10px;
+}
+.footer__main-div__main-p-last p:nth-child(3) {
+	font-family: Verdana;
+	font-size: 11px;
+}
+.footer__main-div .footer__main-div__support-second {
+	width: 30%;
+	margin-right: 3%;
+}
+.footer-copyright {
+	font-family: Verdana;
+    font-size: 11px;
+    color: #a1a1a1;
+    text-align: right;
+    margin-bottom: 10px;
+}

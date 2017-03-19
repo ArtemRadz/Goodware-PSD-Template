@@ -1,0 +1,76 @@
+@media (max-width: 991px) {
+	.header__mainImg-blackReact {
+		height: 350px;
+	}
+	.header__mainImg-blackReact {
+		font-size: 45px;
+	}
+	.main__first-div {
+		margin-top: 80px;
+	}
+	.main__first-div span {
+		margin: 40px 0px;
+	}
+	.header__mainImg-blackReact__second-p {
+		font-size: 16px;
+	}
+	.main__div-three,
+	.footer__main-div {
+		flex-direction: column;
+	}
+	.main__first-div p {
+		font-size: 26px;
+	}
+	.footer__main-div > div,
+	.footer__main-div .footer__main-div__support-second {
+		width: 100%;
+	}
+	.footer__main-div__main-p,
+	.footer__main-div__main-p-last p:nth-child(1),
+	.footer__main-div__main-p-last p:nth-child(2),
+	.footer-copyright {
+		text-align: center;
+	}
+	.main__div-three__margin-right {
+		margin-right: 0px;
+	}
+	.footer__main-div__latest-tweets,
+	.footer__main-div__main-p-last p:nth-child(3) {
+		padding-left: 10px;
+	}
+	.main__div-three__img-first,
+	.main__div-three__img-second,
+	.main__div-three__img-third {
+		background-size: cover;
+	}
+	.footer-copyright {
+		line-height: 15px;
+	}
+	.main__div-three__margin-right {
+		margin-bottom: 15px;
+	}
+	.header__bottom {
+		top: 490px;
+	}
+	.header__mainImg__menu ul li {
+		margin-left: 25px;
+	}
+	.header__mainImg {
+		height: 500px;
+	}
+}
+
+@media (max-width: 768px) {
+	.main__first-div p {
+		font-size: 20px;
+	}
+	.main__first-div button {
+		font-size: 16px;
+	}
+	.header__mainImg__menu {
+		display: none;
+	}
+	.hamburger-icon {
+		display: block;
+	}
+}
